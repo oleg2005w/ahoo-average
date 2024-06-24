@@ -1,12 +1,11 @@
 package student.examples;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class Average {
+public class CalculateService {
 
 
-    public int calcAverage(List<Integer> values){
+    public int calculateAverage(List<Integer> values){
         double sum = 0;
         for (int i = 0; i < values.size(); i++) {
             sum += values.get(i);

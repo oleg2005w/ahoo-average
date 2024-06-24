@@ -16,10 +16,10 @@ import java.util.List;
 @Listeners(AverageListener.class)
 
 public class AverageTest {
-    private Average average = new Average();
+    private CalculateService calculateService = new CalculateService();
     @BeforeTest
     public void setup (){
-        Average average;
+        CalculateService calculateService;
     }
     @DataProvider(name = "calcAv")
     public Iterator<List<Integer>> calcAv() throws IOException {
@@ -64,8 +64,8 @@ public class AverageTest {
         System.out.println("Values======> " + values);
         System.out.println("0 result "+ res);
         values.remove(0);
-        System.out.println("Average function---->" + average.calcAverage(values));
-        Assert.assertEquals(average.calcAverage(values), res);
+        System.out.println("Average function---->" + calculateService.calculateAverage(values));
+        Assert.assertEquals(calculateService.calculateAverage(values), res);
 
     }
     @AfterClass
